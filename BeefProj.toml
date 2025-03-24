@@ -6,7 +6,7 @@ DefaultNamespace = "cmark"
 
 [Configs.Debug.Win64]
 CLibType = "DynamicDebug"
-LibPaths = ["$(ProjectDir)\\libs\\debug\\cmark.lib"]
+LibPaths = ["$(ProjectDir)\\libs\\windows\\cmarkd.lib"]
 
 [Configs.Release.Win64]
-LibPaths = ["$(ProjectDir)\\libs\\release\\cmark.lib"]
+LibPaths = ["$(ProjectDir)\\libs\\windows\\cmark.lib"]

@@ -28,7 +28,7 @@ public static class cmark
 
 	/** ## Node Structure */
 	[AllowDuplicates]
-	public enum cmark_node_type
+	public enum cmark_node_type : c_int
 	{
 		/* Error status */
 		CMARK_NODE_NONE,
@@ -70,14 +70,14 @@ public static class cmark
 	// CMARK_NODE_HTML CMARK_NODE_HTML_BLOCK
 	// CMARK_NODE_INLINE_HTML CMARK_NODE_HTML_INLINE
 
-	public enum cmark_list_type
+	public enum cmark_list_type : c_int
 	{
 		CMARK_NO_LIST,
 		CMARK_BULLET_LIST,
 		CMARK_ORDERED_LIST
 	}
 
-	public enum cmark_delim_type
+	public enum cmark_delim_type : c_int
 	{
 		CMARK_NO_DELIM,
 		CMARK_PERIOD_DELIM,
@@ -100,7 +100,7 @@ public static class cmark
 		function void*(size_t, size_t) calloc;
 		function void*(void*, size_t) realloc;
 		function void(void*) free;
-	};
+	}
 
 	/** Returns a pointer to the default memory allocator.
 	*/
@@ -214,7 +214,7 @@ public static class cmark
 	* leaf nodes.
 	*/
 
-	public enum cmark_event_type
+	public enum cmark_event_type : c_int
 	{
 		CMARK_EVENT_NONE,
 		CMARK_EVENT_DONE,
